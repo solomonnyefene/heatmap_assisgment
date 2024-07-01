@@ -1,35 +1,43 @@
 /* styles.css */
 
 @font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('assets/fonts/bricolage-grotesque.woff2') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: 'Circular Std';
-  src: url('fonts/CircularStd-Book.ttf') format('truetype');
+  src: url('assets/fonts/CircularStd-Book.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Circular Std';
-  src: url('fonts/CircularStd-Medium.ttf') format('truetype');
+  src: url('assets/fonts/CircularStd-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Circular Std';
-  src: url('fonts/CircularStd-Bold.ttf') format('truetype');
+  src: url('assets/fonts/CircularStd-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Circular Std';
-  src: url('fonts/CircularStd-Black.ttf') format('truetype');
+  src: url('assets/fonts/CircularStd-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family:'Circular Std';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -109,7 +117,6 @@ body {
 .dropdown-menu li:hover{
   background: #B0F6C2;
 }
-
 .dropdown-menu li a{
   text-decoration: none;
   color: #091226
@@ -131,7 +138,7 @@ body {
   color: #091226;
 }
 
-/* Main Content Styles */
+/*---------------- Main Content Styles----------------------- */
 .main-content {
   padding: 60px 40px;
 }
@@ -145,7 +152,35 @@ body {
 .hero-content {
   order: 1;
 }
+.hero-content p img{
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.hero-content p:first-child{
+  width: 243px;
+  border-radius: 60px;
+  text-align: center;
+  border:1px solid #091226;
+  padding: 6px 27px 6px 27px
+}
+.hero-content p:nth-of-type(2){
+  font-size: 18px;
+  line-height: 25.56px;
+  font-weight: 450p;
+  margin-bottom: 30px;
+}
+.hero-content h1 {
+  font-family:'Bricolage Grotesque';
+  font-size: 56px;
+}
 
+.hero-buttons a {
+  border: 1px solid #091226;
+  font-size: 14px;
+  color: #091226;
+  margin-right: 10px;
+}
 .top-product {
   background-color: #fff;
   border: 1px solid #e0e0e0;
