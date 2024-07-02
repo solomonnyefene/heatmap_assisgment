@@ -421,7 +421,7 @@ a {
 }
 @media (max-width: 1350px) {
   .main-content{
-    padding: 30px;
+    padding: 0px;
     display: flex;
   }
   .break {
@@ -453,17 +453,26 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
-    padding: 0px;
+    padding: 15px;
     width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    background: #F8F3EF;
   }
   .hero-content{
     width: 100%;
     margin: 10px;
     text-align: center;
   }
+  .hero-content h1{
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 700;
+  }
   .hero-content .trusted-by {
     position: relative;
     margin: auto;
+    margin-top: 5px;
     background: #F2F5F9;
     margin-bottom: 0;
   }
@@ -475,14 +484,19 @@ a {
   .intro-content{
     width: 100%;
   }
+  
   .mobile-bg-wrap{
     display: block;
     position: relative;
     margin-bottom: 40px;
+   }
+  .bg-img{
+   position: relative;
+   height: 400px;
   }
-  .mobile-bg-wrap img{
-   width: 100%;
-   height: 200px;
+  .intro-content{
+    font-size: 16px;
+    line-height: 22.72px;
   }
   .top-product{
     display: none;
