@@ -170,7 +170,8 @@ a {
   display: inline-block;
   vertical-align: middle;
 }
-.hero-content p:first-child{
+.hero-content .trusted-by{
+  margin: auto;
   width: 243px;
   border-radius: 60px;
   text-align: center;
@@ -188,9 +189,19 @@ a {
   font-weight: 450p;
   margin-bottom: 30px;
 }
+.hero-content .trusted-by{
+  position: absolute;
+  text-align: left;
+}
+.hero-content img:first-child{
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
 .hero-content h1 {
   font-family:'Bricolage Grotesque';
   font-size: 56px;
+  margin-top: 80px;
 }
 
 .hero-buttons a {
@@ -361,6 +372,34 @@ a {
 }
 
 /* Responsive Styles */
+@media (max-width: 550px) {
+  .header{
+    padding-right: 65px;
+  }
+  .navbar-brand img{
+    width: 145px;
+    position: relative;
+    top: 7px;
+    left: 30px;
+  }
+  .trusted-by img{
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .hero-content .trusted-by{
+    background: #F2F5F9;
+    border: none;
+  }
+  .start-trial{
+    position: absolute;
+    width: 80px;
+    font-size: 13px;
+    padding: 5px;
+    text-align: center;
+    top: 4px;
+  }
+}
 @media (min-width: 300px) and (max-width: 1350px) {
   .top-product-wrap{
     width: 450px;
@@ -422,11 +461,13 @@ a {
     margin: 10px;
     text-align: center;
   }
-  .hero-content p {
+  .hero-content .trusted-by {
+    position: relative;
     margin: auto;
     background: #F2F5F9;
-    outline: none
+    margin-bottom: 0;
   }
+
   .intro{
     width: 400px;
     text-align: center;
@@ -441,6 +482,7 @@ a {
   }
   .mobile-bg-wrap img{
    width: 100%;
+   height: 200px;
   }
   .top-product{
     display: none;
