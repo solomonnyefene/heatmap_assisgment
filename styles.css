@@ -379,7 +379,6 @@ a {
     width: 300px;
     background: red;
   }
- 
 }
 @media (max-width: 1350px) {
   .main-content{
