@@ -90,12 +90,7 @@ a {
 #menu-toggle{
   display: none;
 }
-.show-menu {
-  display: block;
-}
-.hide-menu {
-  display: none;
-}
+
 /* ----end-------- */
 .navbar {
   display: flex;
@@ -447,17 +442,15 @@ a {
   }
   .intro {
     width: 300px;
-    background: red;
   }
 }
 @media (max-width: 1350px) {
 
   /* ----hamburger menu---- */
-
   .hamburger-menu {
     position: absolute;
     top: 100px;
-    left: 30px;
+    left: 23px;
     display: none;
     width: 209px;
     border-radius: 17.28px;
@@ -484,7 +477,7 @@ a {
   .navbar .hamburger.active + .hamburger-menu {
     display: block;
   }
-  .show-menu {
+  .visible {
     display: block;
   }
 

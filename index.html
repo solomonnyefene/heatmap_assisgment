@@ -127,23 +127,20 @@
       </section>
     </main>
     <script>
-
+    // ----For opening and closing hamburger menu on mobile screens----
     document.addEventListener('click', function () {
       var hamburger = document.querySelector('.hamburger');
       var menu = document.querySelector('.hamburger-menu');
-
       const menuToggle = document.getElementById('menu-toggle');
       const isClickInside = hamburger.contains(event.target) || menu.contains(event.target);
-        
-      if (isClickInside) {
-        menu.classList.toggle('show-menu');
+      var targetElement = event.target;
+
+      if (targetElement.type === 'checkbox') {
+        menu.classList.toggle('visible');
       }else{
-        menu.classList.toggle('hide-menu');
-        menuToggle.checked = false
+        menu.classList.remove('visible');
       }
-
     });
-
     </script>
   </body>
 </html>
