@@ -549,7 +549,9 @@ a {
     width: 327px;
     line-height: 22.72px;
     padding: 5px;
+    margin: auto;
     margin-top: 20px;
+    margin-bottom: 30px;
   }
   .intro-content h1 {
     font-weight: 700;
