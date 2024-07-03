@@ -6,29 +6,21 @@
     <title>Heatmap</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-
   </head>
   <body>
     <header class="header">
       <nav class="navbar">
-        <div class="hamburger" id="hamburger">
+        <!-- Checkbox for toggling -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <label class="hamburger" for="menu-toggle">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
-        </div>
-
-        <div class="hamburger-menu" id="hamburger-menu">
-          <a href="#">Home</a>
-          <a href="#">Features</a>
-          <a href="#">Pricing</a>
-          <a href="#">Case Studies</a>
-          <a href="#">Contact</a>
-        </div>
-
+        </label>
         <a class="navbar-brand" href="#">
           <img class="heatmap-logo" src="./assets/images/1.png" alt="heatmap logo"/>
         </a>
-
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
@@ -38,49 +30,51 @@
               <li><a class="dropdown-item" href="#">Screen Recordings</a></li>
               <li><a class="dropdown-item" href="#">CRO Education Center</a></li>
               <li><a class="dropdown-item" href="#">GDPR Compliance</a></li>
-          </ul>
+            </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Case Studies</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Case Studies</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
         </ul> 
         <div class="cta-buttons">
           <a href="#" class="btn btn-success start-trial">Start Free Trial</a>
           <a href="#" class="btn btn-outline-success login-btn">Login</a>
         </div> 
+        <!-- Hamburger Menu Items -->
+        <div class="hamburger-menu" >
+          <a href="#">Home</a>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Case Studies</a>
+          <a href="#">Contact</a>
+        </div>
       </nav>
     </header>
-
     <main class="main-content">
       <section class="hero">
         <div class="hero-content">
-           <div class="trusted-by"> 
+          <div class="trusted-by"> 
             <img src="assets/images/starsicon.png" alt="Star"/> 
             Trusted by 1,000+ Brands
           </div>
-          <h1>Heatmaps that <br class="break"/> show Revenue, not 
-            <br class="break"/> just clicks</h1>
+          <h1>Heatmaps that <br class="break"/> show Revenue, not <br class="break"/> just clicks</h1>
           <span class="intro">
-             <div class="intro-content">
+            <div class="intro-content">
               Find out what generates revenue on your website with Revenue-Based
-              Heatmaps.<b>Boost your revenue in 30 days or less withHeatmap.com, no
+              Heatmaps.&nbsp;<b>Boost your revenue in 30 days or less withHeatmap.com, no
               CRO expertise needed</b>. Watch 2-3 videos in our CRO Education Center
               to make meaningful website and revenue improvements.
-             </div>
+            </div>
           </span> 
           <div class="mobile-bg-wrap">
             <img style="width: 100%; height: 300px;" class="bg-img" src="assets/images/mobile 1 hero 1.png" alt="mobile bg" />
-             </div>
+          </div>
           <div class="hero-buttons">
             <a href="#" class="btn btn-success">Get Started — It’s Free →</a>
-
             <a href="#" class="btn btn-outline-success">
-              <span >
-                 <span><img style="height:17px" src="assets/images/play.png" alt="Play icon"/></span>
-                 <span class="watch-demo-text">Watch a Demo</span>
+              <span>
+                <span><img style="height:17px" src="assets/images/play.png" alt="Play icon"/></span>
+                <span class="watch-demo-text">Watch a Demo</span>
               </span>
             </a>
           </div> 
@@ -88,18 +82,18 @@
         <div class="top-product">
           <div class="top-product-wrap">
             <div class="top-product-wrap-inner">
-              <div class="item first-item" >
-                  <p>
-                    <h3>Our top product</h3>
-                    <ul>
-                      <li> &#10003; Best in class features</li>
-                      <li> &#10003; Dedicated support</li>
-                    </ul>
-                 </p>
-                 <div>
-                   Buy Now
-                   <img src="assets/images/Vector.png" />
-                 </div>                 
+              <div class="item first-item">
+                <p>
+                  <h3>Our top product</h3>
+                  <ul>
+                    <li> &#10003; Best in class features</li>
+                    <li> &#10003; Dedicated support</li>
+                  </ul>
+                </p>
+                <div>
+                  Buy Now
+                  <img src="assets/images/Vector.png" />
+                </div>                 
               </div>
               <div class="item second-item">
                 <div class="hero-btn-menu">
@@ -129,16 +123,27 @@
               </div>
             </div>
           </div>
-          </div> 
-        </div>
-
+        </div> 
       </section>
     </main>
     <script>
-      document.getElementById('hamburger').addEventListener('click', function() {
-        const menu = document.getElementById('hamburger-menu');
+
+    document.addEventListener('click', function () {
+      var hamburger = document.querySelector('.hamburger');
+      var menu = document.querySelector('.hamburger-menu');
+
+      const menuToggle = document.getElementById('menu-toggle');
+      const isClickInside = hamburger.contains(event.target) || menu.contains(event.target);
+        
+      if (isClickInside) {
         menu.classList.toggle('show-menu');
-      });
+      }else{
+        menu.classList.toggle('hide-menu');
+        menuToggle.checked = false
+      }
+
+    });
+
     </script>
   </body>
 </html>
