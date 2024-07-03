@@ -531,6 +531,7 @@ a {
     margin-top: 20px;
     font-size: 32px;
     font-weight: 700;
+    margin: 0px 5px;
   }
   .hero-content .trusted-by {
     position: relative;
@@ -545,9 +546,17 @@ a {
     text-align: center;
   }
   .intro-content {
-    width: 100%;
+    width: 327px;
+    line-height: 22.72px;
+    padding: 5px;
+    margin-top: 10px;
   }
-
+  .intro-content h1 {
+    font-weight: 700;
+  }
+  .intro-content span {
+    font-weight: 900;
+  }
   .mobile-bg-wrap {
     display: block;
     position: relative;
