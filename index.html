@@ -16,9 +16,19 @@
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
+
+        <div class="hamburger-menu" id="hamburger-menu">
+          <a href="#">Home</a>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Case Studies</a>
+          <a href="#">Contact</a>
+        </div>
+
         <a class="navbar-brand" href="#">
           <img class="heatmap-logo" src="./assets/images/1.png" alt="heatmap logo"/>
         </a>
+
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
@@ -43,6 +53,7 @@
         </div> 
       </nav>
     </header>
+
     <main class="main-content">
       <section class="hero">
         <div class="hero-content">
@@ -74,7 +85,6 @@
             </a>
           </div> 
         </div>
-        
         <div class="top-product">
           <div class="top-product-wrap">
             <div class="top-product-wrap-inner">
@@ -90,7 +100,6 @@
                    Buy Now
                    <img src="assets/images/Vector.png" />
                  </div>                 
-
               </div>
               <div class="item second-item">
                 <div class="hero-btn-menu">
@@ -122,8 +131,14 @@
           </div>
           </div> 
         </div>
-      
+
       </section>
     </main>
+    <script>
+      document.getElementById('hamburger').addEventListener('click', function() {
+        const menu = document.getElementById('hamburger-menu');
+        menu.classList.toggle('show-menu');
+      });
+    </script>
   </body>
 </html>
